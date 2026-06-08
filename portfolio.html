@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="View live micro-website demos for gyms, clinics, hostels, and real estate prebuilt by SiteLab India. Verified portfolios for local small businesses.">
+  <title>Our Portfolio &amp; Demos Showcase — SiteLab India</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Custom cursor elements -->
+  <div class="cursor" id="cursor"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- NAVIGATION HEADER -->
+  <nav id="navbar">
+    <a href="index.html" class="nav-logo">Site<span>Lab</span> India</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="portfolio.html" class="active">Portfolio</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="https://wa.me/917878574692?text=Hi%20Kapil%2C%20I%20want%20a%20website%20for%20my%20business!" target="_blank" class="nav-cta">Get Started →</a>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </nav>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <div class="mobile-menu" id="mobileMenu">
+    <button class="mobile-close" onclick="toggleMenu()">✕</button>
+    <a href="index.html" onclick="toggleMenu()">Home</a>
+    <a href="services.html" onclick="toggleMenu()">Services</a>
+    <a href="portfolio.html" class="active" onclick="toggleMenu()">Portfolio</a>
+    <a href="about.html" onclick="toggleMenu()">About Us</a>
+    <a href="contact.html" onclick="toggleMenu()">Contact</a>
+  </div>
+
+  <!-- HEADER SECTION -->
+  <section style="padding-top: 140px; padding-bottom: 60px; background: linear-gradient(180deg, rgba(8,8,17,1) 0%, rgba(14,15,32,1) 100%);">
+    <div class="section-tag">Showcase Demos</div>
+    <h1 class="section-title">Pre-built Website<br><span style="color: var(--gold);">Templates</span></h1>
+    <p class="section-sub">Explore fully functional reference landing pages we built. Click any card to preview how your future website will function live.</p>
+  </section>
+
+  <!-- PORTFOLIO GRID -->
+  <section style="background: var(--bg); padding-top: 40px;">
+    <!-- CATEGORY FILTER BUTTONS -->
+    <div class="filter-group">
+      <button class="filter-btn active" onclick="filterCategory('all', this)">All Demos</button>
+      <button class="filter-btn" onclick="filterCategory('healthcare', this)">🩺 Healthcare &amp; Clinics</button>
+      <button class="filter-btn" onclick="filterCategory('business', this)">🏢 Local Businesses</button>
+    </div>
+
+    <div class="demos-grid" id="demosGrid">
+
+      <!-- CLINIC DEMO -->
+      <a href="https://mr-yadav00.github.io/Sharma-care-clinic/" target="_blank" class="demo-card reveal visible" data-category="healthcare" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=600&q=80" alt="Sharma Care Clinic Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">🩺 Clinic / Doctor</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>Sharma Care Clinic</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Talwandi, Kota</p>
+          <p>Premium healthcare layout with specialist profile highlights, booking buttons, timings details, and locations embed.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">1-Page</span>
+            <span class="demo-tag">Appointments</span>
+            <span class="demo-tag">Clinic Timings</span>
+            <span class="demo-tag">Clean Blue Theme</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- GYM DEMO -->
+      <a href="https://mr-yadav00.github.io/YadavFitnessClub/" target="_blank" class="demo-card reveal visible" data-category="business" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=600&q=80" alt="Yadav Fitness Club Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">🏋️ Fitness</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>Yadav Fitness Club</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Jawahar Nagar, Kota</p>
+          <p>High-energy gym layout with member plans details, timings cards, coaches grid, and direct WhatsApp contact.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">1-Page</span>
+            <span class="demo-tag">Membership Table</span>
+            <span class="demo-tag">WhatsApp CTA</span>
+            <span class="demo-tag">Dark Sporty Look</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- HOSTEL DEMO -->
+      <a href="https://mr-yadav00.github.io/Radha-Raman-Residency/" target="_blank" class="demo-card reveal visible" data-category="business" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1555854877-bab0e564b8d5?w=600&q=80" alt="Radha Raman Residency Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">🏠 Residency</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>Radha Raman Residency</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Premium Student Living, Kota</p>
+          <p>Clean residency template for student rentals with room galleries lists, hostel amenities tags, and fee details.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">1-Page</span>
+            <span class="demo-tag">Amenities Grid</span>
+            <span class="demo-tag">Photo Showcase</span>
+            <span class="demo-tag">Light Minimalist</span>
+          </div>
+        </div>
+      </a>
+
+      <!-- CONTRACTOR DEMO -->
+      <a href="https://mr-yadav00.github.io/Lekhraj-contractor-/" target="_blank" class="demo-card reveal visible" data-category="business" style="opacity: 1; transform: translateY(0); transition: opacity 0.3s, transform 0.3s;">
+        <div class="demo-preview">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="Lekhraj Contractor Real Estate Demo">
+          <div class="demo-overlay"></div>
+          <div class="demo-category">🏗️ Real Estate</div>
+          <div class="demo-view-btn">View Demo ↗</div>
+        </div>
+        <div class="demo-info">
+          <h3>Lekhraj Contractor</h3>
+          <p style="color:var(--muted);font-size:0.78rem;margin-bottom:6px">📍 Precast Boundary Wall &amp; Real Estate, Kota</p>
+          <p>Trustworthy builder/contractor portfolio showing past construction projects gallery list and phone enquiry buttons.</p>
+          <div class="demo-tags">
+            <span class="demo-tag">1-Page</span>
+            <span class="demo-tag">Project Gallery</span>
+            <span class="demo-tag">Work Highlights</span>
+            <span class="demo-tag">Modern Gold Accents</span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS (TRUST INJECT) -->
+  <section style="background: var(--bg2); border-top: 1px solid rgba(255,255,255,0.03);">
+    <div style="text-align: center; margin-bottom: 50px;">
+      <div class="section-tag" style="justify-content: center;">Client Testimonials</div>
+      <h2 class="section-title">Loved by Local Owners</h2>
+      <p class="section-sub" style="margin: 0 auto;">Read what local business administrators in Kota say about our 72-hour turnaround service.</p>
+    </div>
+
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; max-width: 1000px; margin: 0 auto;">
+      <div style="background: var(--bg3); padding: 30px; border-radius: var(--radius); border: 1px solid rgba(255,184,0,0.15);">
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7; font-style: italic; margin-bottom: 20px;">
+          "I needed a web page to showcase room configurations and amenities for our new hostel in Talwandi. Kapil designed and hosted the site within exactly 72 hours. The WhatsApp button allows students to check room availability instantly!"
+        </p>
+        <h4 style="font-weight: 700; font-size: 0.95rem; color: var(--gold);">— Resident Manager, Radha Raman Residency</h4>
+        <span style="font-size: 0.8rem; color: var(--muted);">Kota, Rajasthan</span>
+      </div>
+
+      <div style="background: var(--bg3); padding: 30px; border-radius: var(--radius); border: 1px solid rgba(255,184,0,0.15);">
+        <p style="color: var(--muted); font-size: 0.9rem; line-height: 1.7; font-style: italic; margin-bottom: 20px;">
+          "Our fitness center needed an affordable listing layout. SiteLab built a premium dark-themed layout that highlights our cardio sessions, fees, and location. Our inquiries through Google search have increased significantly."
+        </p>
+        <h4 style="font-weight: 700; font-size: 0.95rem; color: var(--gold);">— Gym Operations Lead, Yadav Fitness Club</h4>
+        <span style="font-size: 0.8rem; color: var(--muted);">Kota, Rajasthan</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div>
+        <a href="index.html" class="footer-logo">Site<span>Lab</span> India</a>
+        <p class="footer-tagline">Premium website design agency serving local doctors, clinics, and businesses in Kota, Rajasthan.</p>
+      </div>
+      <div class="footer-links-group">
+        <div class="footer-links">
+          <h4>Studio</h4>
+          <a href="index.html">Home</a>
+          <a href="services.html">Services Package</a>
+          <a href="portfolio.html">Our Work</a>
+          <a href="about.html">About Us</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="footer-links">
+          <h4>Target Sectors</h4>
+          <a href="services.html">Medical Clinics</a>
+          <a href="services.html">Doctors / Dentists</a>
+          <a href="services.html">Student Hostels &amp; PGs</a>
+          <a href="services.html">Local Retail Shops</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">© 2026 SiteLab India. All rights reserved.</p>
+      <p class="footer-dev">Built by <span>Kapil Ahir</span> — Web Developer, Kota</p>
+    </div>
+  </footer>
+
+  <script>
+    // Navigation Scroll Styling
+    window.addEventListener('scroll', () => {
+      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 40);
+    });
+
+    // Mobile Navigation Drawer Toggle
+    function toggleMenu() {
+      document.getElementById('mobileMenu').classList.toggle('open');
+    }
+
+    // Custom Cursor Logic
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    const isTouch = window.matchMedia("(pointer: coarse)").matches;
+    
+    if (isTouch) {
+      if (cursor) cursor.style.display = 'none';
+      if (ring) ring.style.display = 'none';
+    } else {
+      let mx = 0, my = 0, rx = 0, ry = 0;
+      document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; cursor.style.left = mx + 'px'; cursor.style.top = my + 'px'; });
+      function animateRing() { rx += (mx - rx) * 0.14; ry += (my - ry) * 0.14; ring.style.left = rx + 'px'; ring.style.top = ry + 'px'; requestAnimationFrame(animateRing); }
+      animateRing();
+      document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => { cursor.style.transform = 'translate(-50%,-50%) scale(2)'; cursor.style.background = 'rgba(255,184,0,0.5)'; ring.style.transform = 'translate(-50%,-50%) scale(1.5)'; });
+        el.addEventListener('mouseleave', () => { cursor.style.transform = 'translate(-50%,-50%) scale(1)'; cursor.style.background = 'var(--gold)'; ring.style.transform = 'translate(-50%,-50%) scale(1)'; });
+      });
+    }
+
+    // Category Filtering Logic
+    function filterCategory(category, btn) {
+      // Toggle active classes on buttons
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      // Filter cards with fade transitions
+      document.querySelectorAll('.demo-card').forEach(card => {
+        const cardCat = card.getAttribute('data-category');
+        if (category === 'all' || cardCat === category) {
+          card.style.display = 'block';
+          // Small timeout to allow display display update before animating opacity
+          setTimeout(() => {
+            card.style.opacity = '1';
+            card.style.transform = 'translateY(0) scale(1)';
+          }, 50);
+        } else {
+          card.style.opacity = '0';
+          card.style.transform = 'translateY(15px) scale(0.96)';
+          setTimeout(() => {
+            if (card.style.opacity === '0') {
+              card.style.display = 'none';
+            }
+          }, 300);
+        }
+      });
+    }
+  </script>
+</body>
+</html>
